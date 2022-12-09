@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Ohanlon";
+  src: url("Fonts/OhanlonDemo-2OwLK.ttf ");
+}
+@font-face {
+  font-family:Milk;
+  src: url(Fonts/Milk\ Kids.ttf);
+}
+h1
+{
+  color:purple;
+  font-family: Ohanlon;
+}
+h2
+{
+  font-family:Ohanlon;
+  color:  whitesmoke;
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  
+}
+p {
+  font-family: Milk;
+  font-size: 20px;
+  color: rgb(9, 240, 59);
+}
+.bg
+{
+  background-color: black;
+}
+h3 
+{
+ text-align: center;
+}
+.header {
+  background-image: url("Assets/Grass Image.jpg");
+  padding: 30px;
+  text-align: center;
+  font-size: 55px;
+  font-family: "NEON LED";
+  color: grey;
+  -webkit-text-stroke-width : 2px;
+  -webkit-text-stroke-color: black  ;
+  text-transform: uppercase;
+}
+.center {
+  margin: auto;
+  width: 15%;
+  font-size: 50px;
+  padding: 5px;
+  font-family:Ohanlon;
+  color: blue;
+}
+h4
+{
+  font-family:Ohanlon;
+  color:  gold;
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  
+}
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  width: 90%;
+  margin: 40px auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.container1 {
+  position: relative;
+}
+
+.front h2 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  color: white;
+  padding: 15px;
+  transform: perspective(600px) rotateY(180deg);
+  transition: transform .5s linear 0s;
+  backface-visibility: hidden;
+  border-radius: 10px
+}
+
+.front {
+  color: white;
+  transform: perspective(600px) rotateY(0deg);
+  transition: transform .5s linear 0s;
+
+
+}
+
+.container1:hover>.front {
+  transform: perspective(600px) rotateY(-180deg);
+  cursor: pointer;
+}
+
+.container1:hover>.back {
+  transform: perspective(600px) rotateY(0deg);
+  cursor: pointer;
+
+
+}
+
+@media(max-width: 800px) {
+  .container {
+      grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media(max-width: 500px) {
+  .container {
+      grid-template-columns: repeat(1, 1fr);
+
+  }
+}
